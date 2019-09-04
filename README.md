@@ -155,13 +155,6 @@ A better abstraction for that call would look for errors in the response and rai
 def get_users(limit=10):
    query = '''
     query ListUsers {{
-        #            ^
-        #            | double braces
-        # Note: +----+
-        #       |
-        #       +--------+
-        #                | single braces
-        #                V
         listUsers(limit: {limit}) {{
            userId
            email
