@@ -7,6 +7,11 @@ I have yet to see a Python library that makes interacting with a GraphQL server 
 
 # API Abstraction
 
+### TL;DR
+
+ 1. **DON'T** repeat yourself.
+ 2. **DO** write a simple function that does the boilerplate stuff, such as setting the auth key header, etc. 
+
 In its simplest form, a GraphQL client will look something like this:
 
 ```python
@@ -104,6 +109,12 @@ def get_users(limit=10):
 This way you can write the query as a single string, and variables can be interpolated in a way that adds minimal noise to it. The main thing to remember here is that when you need a literal opening or closing curly brace, you'll need two of them. A single `{}` pair indicates that a variable will be added there using the `.format()` method. You can add a token within single braces as a placeholder for the `.format()` method. Example: `'hello, {name}'.format(name="Dave")`.
 
 # Query abstraction
+
+### TL;DR
+
+ 1. **DON'T** write a leaky abstraction.
+ 2. **DO** write an abstraction that handles errors according to GraphQL's paradigm. 
+ 3. **DO** write an abstraction that unwraps GraphQL's response so the client can be agnostic of the source of the data. 
 
 When making a single to the API, it is helpful to also abstract out the fact that the data is being fetch from an API. That way the client truly only knows that calling some function will return some _generic_ object (typically, probably a dict). For example, the sample function `get_users()` above does just that.
 
