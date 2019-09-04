@@ -83,11 +83,11 @@ def get_users(limit=10):
    query = '''
     query ListUsers {{
         #            ^
-        #            | double brackets
+        #            | double braces
         # Note: +----+
         #       |
         #       +--------+
-        #                | single brackets
+        #                | single braces
         #                V
         listUsers(limit: {limit}) {{
            userId
@@ -97,4 +97,4 @@ def get_users(limit=10):
    '''.format(limit=limit)
 ```
 
-This way you can write the query as a single string, and variables can be interpolated in a way that adds minimal noise to it. The main thing to remember here is that when you need a literal opening or closing bracket, you'll need two of them. A single `{}` pair indicates that a variable will be added there using the `.format()` method. You can add a token within single brackets as a placeholder for the `.format()` method. Example: `'hello, {name}'.format(name="Dave")`.
+This way you can write the query as a single string, and variables can be interpolated in a way that adds minimal noise to it. The main thing to remember here is that when you need a literal opening or closing curly brace, you'll need two of them. A single `{}` pair indicates that a variable will be added there using the `.format()` method. You can add a token within single braces as a placeholder for the `.format()` method. Example: `'hello, {name}'.format(name="Dave")`.
