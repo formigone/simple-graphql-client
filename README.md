@@ -5,6 +5,8 @@
 
 Since I have yet to see a Python library that makes interacting with a GraphQL server easier, I'm hoping to write something to help the world. In the meantime, I will list common pitfalls and how to avoid them. Maybe in a not-too-distant future, there will be a really amazin abstraction that you can use in your projects without having to build your own abstarctions from scratch every time.
 
+![Facebook stuff is "easy to reason about"](https://i.imgflip.com/39ouwm.jpg)
+
 # Table of contents
 
  + [API Abstraction](#api-abstraction)
