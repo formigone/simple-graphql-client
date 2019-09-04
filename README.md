@@ -5,6 +5,14 @@
 
 I have yet to see a Python library that makes interacting with a GraphQL server easier, I'm hoping to write something to help the world. In the meantime, I will list common pitfalls and how to avoid them.
 
+# Table of contents
+
+ + [API Abstraction](#api-abstraction)
+ + [Parameterizing queries](#parameterizing-queries)
+ + [Query abstraction](#query-abstraction)
+
+---
+
 # API Abstraction
 
 ### TL;DR
