@@ -82,13 +82,13 @@ Here's what you *should do* instead:
 def get_users(limit=10):
    query = '''
     query ListUsers {{
-        # Note: ---------+--------------------+
-        #                |  single brackets   |
-        #                | /                  |
-        #                |         +----------+
-        #                |         |  double brackets
-        #                |         | /
-        #                V         V
+        #            ^
+        #            | double brackets
+        # Note: +----+
+        #       |
+        #       +--------+
+        #                | single brackets
+        #                V
         listUsers(limit: {limit}) {{
            userId
            email
